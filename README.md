@@ -9,9 +9,9 @@ I hope, I can reach my goals with the help of the repository.
 
 # Table of contents
 
-* [Bayesian statistics](Bayesian statistics/README.md)
 * [Cool algorithms](Algorithms/README.md)
   * [Coin changer](Algorithms/coin_changer/README.md)
+* [Bayesian statistics](Bayesian statistics/README.md)
 * [Modeling](Modeling/README.md)
 * [Simulation](Simulation/README.md)
 

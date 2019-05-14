@@ -16,6 +16,6 @@ Of course, for larger scripts or projects the description is in a seperate markd
 # Table of contents
 
 - [Coin changer](coin_changer)
-  - [Coin changer description](coin_changer/README.md)
-  - [Coin changer script](coin_changer/change_coins.R)
+  - [Description](coin_changer/README.md)
+  - [Script](coin_changer/change_coins.R)
 
