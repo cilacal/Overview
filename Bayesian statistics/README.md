@@ -11,3 +11,6 @@ The structure of each folder is the following:
 
 Of course, for larger scripts or projects the description is in a seperate markdown file and the README.md serves its original purpose.
 
+# Table of contents
+
+- 
