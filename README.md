@@ -21,6 +21,7 @@ A, by far not total, summary of my contribution to the platform can be read in t
 * [Built-in strategies](https://docs.trality.com/api-documentation/built-in-strategies)
 * [Portfolio optimization](https://docs.trality.com/api-documentation/portfolio-optimization)
 * [Portfolio rebalancing](https://docs.trality.com/api-documentation/portfolio-rebalancing)
+
 Of course, the implementation of these advanced algorithms cannot be published on my private profile.
 
 Please note, that besides the implementation of the algorithms, described in the above mentioned part of the documentation, the documentation itself was written by me.
