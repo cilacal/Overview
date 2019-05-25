@@ -11,9 +11,10 @@ I hope, I can reach my goals with the help of the repository.
 
 * [Cool algorithms](Algorithms/README.md)
   * [Coin changer](Algorithms/coin_changer/README.md)
-* [Bayesian statistics](Bayesian statistics/README.md)
-* [Modeling](Modeling/README.md)
-* [Simulation](Simulation/README.md)
+  * _More fun are coming soon!_
+* [Bayesian statistics](Bayesian statistics/README.md) _Coming soon!_
+* [Modeling](Modeling/README.md) _Coming soon!_
+* [Simulation](Simulation/README.md) _Coming soon!_
 
 # My months by Trality
 I have learned a lot about development, advanced algorithms, technical writing and overall about the "start up life" thanks to the unique opportunity of being part of the team of [Trality](trality.com) from the very beginning of the development of the platform.
