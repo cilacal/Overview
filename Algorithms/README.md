@@ -15,7 +15,11 @@ Of course, for larger scripts or projects the description is in a seperate markd
 
 # Table of contents
 
-- [Coin changer](coin_changer)
+- Number representation changer
+  - [Description - algorithm](representation_changer/README.md)
+  - [Description - Shiny app](representation_changer/shiny_descr.md)
+  - [Scripts](representation_changer)
+- Coin changer
   - [Description](coin_changer/README.md)
   - [Script](coin_changer/change_coins.R)
 
