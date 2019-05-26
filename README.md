@@ -10,6 +10,7 @@ I hope, I can reach my goals with the help of the repository.
 # Table of contents
 
 * [Cool algorithms](Algorithms/README.md)
+  * [Representation changer of a number - with an R Shiny App](Algorithms/representation_changer/README.md)
   * [Coin changer](Algorithms/coin_changer/README.md)
   * _Coming soon!_
 * [Bayesian statistics](Bayesian_statistics/README.md) _Coming soon!_
