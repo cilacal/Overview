@@ -6,7 +6,7 @@ This description is for the functions behind the R Shiny app. For the descriptio
 
 ## The problem to solve
 
-_Write a function which computes the k-bit two's complement representation of a given integer. Also implement the inverse function.$^1$_
+_Write a function which computes the k-bit two's complement representation of a given integer. Also implement the inverse function.$$^1$$_
 
 The solution for this question helps to get familiar with the following principles:
 
@@ -70,11 +70,11 @@ if(is.na(n)){
   if(n==0) res <- rep(0,k)
 ```
 
-First, we check if the given number is NA. If yes, it should return the following $k$-length sequence $1,0,0,\dots,0$.
+First, we check if the given number is NA. If yes, it should return the following $$k$$-length sequence $$1,0,0,\dots,0$$.
 
-Then, it is checked, whether the number can be represented as two's complement. The task can be only done, if $n < 2^{k-1}-1$. 
+Then, it is checked, whether the number can be represented as two's complement. The task can be only done, if $$n < 2^{k-1}-1$$. 
 
-Furthermore, if the given number $n$ is equal to $0$, the returned sequence should be a $k$-length sequence of $0$'s.
+Furthermore, if the given number $$n$$ is equal to $$0$$, the returned sequence should be a $$k$$-length sequence of $$0$$'s.
 
 ### The actual algorithm
 
