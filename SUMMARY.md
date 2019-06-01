@@ -11,6 +11,7 @@
   - _Coming soon!_
 - [Simulation](Simulation/README.md) 
   - _Coming soon!_
+- [Asset management](Asset_management/README.md)
 - [Cool algorithms](Algorithms/README.md)
   - [Coin changer](Algorithms/coin_changer/README.md)
   - _Coming soon!_

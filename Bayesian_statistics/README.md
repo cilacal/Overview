@@ -4,13 +4,6 @@ This article is intended to summarize the  most important concepts of the myster
 
 My hope is, that with the help of my explanations and the materials I link here, I will be able to spread the amazing view, how a bayesian statistician sees the world.
 
-The structure of each folder is the following:  
-
-- R or python script with the solution of the given problem, without any explanation
-- markdown file with (almost) line by line explanation of the solution in the README.md file. 
-
-Of course, for larger scripts or projects the description is in a seperate markdown file and the README.md serves its original purpose.
-
 # Table of contents
 
 - Introduction to the Bayesian statistics - you are here currently!
@@ -37,13 +30,19 @@ Here, we can already see, that there is nothing about the probability of the _al
 
 Hence, the $$p$$-value answers the following question:
 
-__"Given that H_0 is true, what is the probability of these (or more extreme) data?"__
+__"Given that H_0 is true, what is the probability of this (or more extreme) data?"__
 
 Given that $$H_0$$ is often a hypothesis for a parameter of a distribution (such as _mean_, _variance_, _proportion in the population_, etc. For a nice cheat sheet about, which hypothesis test is when to use with which test-statistic please refer to my [mind map about statistics](), or [here](<https://www.dummies.com/education/math/statistics/handling-statistical-hypothesis-tests/>) or [here](<https://dacg.in/2018/11/17/statistical-test-cheat-sheet/>)), let's denote it with $$\theta$$. Furthermore, denote the data what we have by _D_. Hence, we can write the probability what we have got as $$P(D|\theta)$$. 
 
+### Example in plain english
+
+Imagine, that you would like to predict the price of a house by applying linear regression.  A house can have many features, let's see _number of rooms_, _number of floors_ etc. For this example, let's consider the coefficient $$\beta$$ connected with the _number of rooms_. The $$H_0$$ is that this coefficient is equal to $$0$$, i.e. $$\beta = 0$$. After applying the linear regression on that dataset, you get a value for $$\beta$$, let's say $$2.5$$ and a $$p$$-value $$0.021$$ connected with that. Based on the above, we already know what the $$p$$-value tells us in this case: the probability of the given dataset under $$H_0$$ is $$0.021$$, i.e. $$2.1\%$$. In other words, it has $$2.1\%$$ probability to get this dataset with $$\beta = 2.5$$ given that the $$\beta = 0$$ ($$H_0$$). As this is below the significance level $$5\%$$, we can reject the $$H_0$$, so that $$\beta = 0$$. 
+
+Great. But do we know anything  about $$\beta$$? Do we know if this $$\beta = 2.5$$ is a valid value? The answer is a huge __NO__!
+
 # Bayesian approach
 
-But where is the problem with NHST? Nice that we have $$P(D|\theta)$$, but we would like to know the probability of $$\theta$$ given the data _D_, so $$P(\theta|D)$$, right?
+In the example above we could see what is the problem with NHST. In other words, the following can be said: nice that we have $$P(D|\theta)$$, but we would like to know the probability of $$\theta$$ given the data _D_, so $$P(\theta|D)$$, right?
 
 Let's recall the Bayes' rule:
 
@@ -53,7 +52,7 @@ and let's substitute _A_ by $$\theta$$ and _B_ by _D_. Then we have
 
 $$ P(\theta|D) = \frac{P(D|\theta)P(\theta)}{P(D)} $$,
 
-which gives the way to calculate the calculate the required probability. Indeed, it is the only way to make statistical inference about the parameter $$\theta$$ conditional on data _D_.  
+which gives the way to calculate the required probability. Indeed, it is the only way to make statistical inference about the parameter $$\theta$$ conditional on data _D_.  
 
 Let's elaborate more what we can see above by describing each element of the equation:
 
@@ -114,13 +113,25 @@ $$p(\sigma^2 | y) \sim \mathcal{IG}\bigg(\frac{n+2}{2}, \frac{1}{2}\bigg(2+s^2+\
 Note that the marginal posterior distribution of $$\mu$$ is a non-standardized Student's $$t$$ distribution:
 $$ \mu|y \sim \mathcal{T}_{n+2}\bigg(\frac{n}{n+1}\bar{y}, \frac{2+s^2+\frac{n}{n+1}\bar{y}^2}{(n+1)(n+2)}\bigg)$$.
 
+![mu_posterior](/home/lachiee/myProjects/Overview/Bayesian_statistics/mu_posterior.png)
+
+_This plot was generated using simulated data. We can see that the given prior works pretty well, as the data  "pushed" the prior towards the real value, resulting a posterior distribution with high peek around the true value._ 
+
+### The same in plain english
+
+Let's assume that we have a vector with values each normally distributed with unknown mean and variance (the same for all value). 
+
+Our _prior_ knowledge/expectation about these parameters are given by the prior distributions, i.e. we expect the mean of the values be normally distributed with $$0$$ mean and with variance, which expected to follow an inverse-gamma distribution (which is identical with an exponential distribution on the precision [:= inverse of the variance]).  If one would have got very strong knowledge/expectation about their value, so called _shrinkage priors_ (more about them [here](#Bayesian_regression/README.md)), or in case of no prior knowledge/expectation about their distribution the above described noninformative priors could have been used. 
+
+After some (a lot) computation, we receive the _joint posterior distribution_ of the parameters mean and variance, which is a product of a normal distribution (which is conditional on the variance) and an inverse-gamma distribution. From this joint posterior, the marginal posterior of the mean can be derived by integrating the joint posterior out on the variance. This procedure give a non-standardized Student's _t_ distribution with the parameterization described above.
+
+Hence, even without knowing the real value of the mean and the variance, with the given priors we can infer about these parameters, as we have their distribution.
+
 # Conclusion
 
-...seeing the results of this simple example, one can imagine, how cumbersome is to derive these posteriors.
+...seeing the results of this simple example, one can imagine, how cumbersome is to derive these posteriors. However, there is a [list](<https://en.wikipedia.org/wiki/Conjugate_prior>) on the Wikipedia with the conjugate priors of the most important distribution, included the posteriors received by using them.
 
-What is more, it is even impossible to derive such close forms of the _posteriors_ in many cases. Here comes the [__Gibbs sampler__](Gibbs_sampler/README.md) into the picture. 
-
-
+However, in many cases it is impossible or very difficult to derive such close forms of the _posteriors_. Here comes the [__Gibbs sampler__](Gibbs_sampler/README.md) into the picture. 
 
 # Resources
 
