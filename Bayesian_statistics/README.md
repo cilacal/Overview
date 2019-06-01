@@ -23,11 +23,11 @@ Of course, for larger scripts or projects the description is in a seperate markd
 
 ## Bayes' rule
 
-$$ P(A|B) = \frac{P(B|A)P(A)}{P(B)} $$
+$$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$$
 
 Yes, this is it. This is the rule on which a whole new kind of statistical thinking is based. Why is that so revolutionary?  To understand this, let's have a quick recap about how frequentist think about statistics.
 
-### Frequentist approach<sup>[1](#myfootnote1)</sup> 
+## Frequentist approach<sup>[1](#myfootnote1)</sup> 
 
 The main weapon of the frequenstist statistics is the Null Hypothesis Significance Testing (NHST). This method of statistical inference is probably known for everybody as this is, even if it is thoroughly criticized, used in many fields, even in the academia. NHST works based on the concepts of significance testing developed by [Fisher (1934, 1955, 1959)](#myfootnote2) and the critical rejection regions introduced by [Neyman & Pearson (1928)]((#myfootnote3)).  Specifically, the probability of the observed, or more extreme result is calculated given that the null hypothesis ($$H_0$$, which often denotes the cases of _"no effect"_, _"mean = 0"_, _"the populations have equal mean"_ etc.) is true. This probability is denoted by the $$p$$-value and calculated with the help of the _t-statistic_ of the given test, which has some kind of distribution (often _t-distribution_). 
 
@@ -43,7 +43,7 @@ __"Given that H_0 is true, what is the probability of these (or more extreme) da
 
 Given that $$H_0$$ is often a hypothesis for a parameter of a distribution (such as _mean_, _variance_, _proportion in the population_, etc. For a nice cheat sheet about, which hypothesis test is when to use with which test-statistic please refer to my [mind map about statistics](), or [here](<https://www.dummies.com/education/math/statistics/handling-statistical-hypothesis-tests/>) or [here](<https://dacg.in/2018/11/17/statistical-test-cheat-sheet/>)), let's denote it with $$\theta$$. Furthermore, denote the data what we have by _D_. Hence, we can write the probability what we have got as $$P(D|\theta)$$. 
 
-### Bayesian approach
+## Bayesian approach
 
 But where is the problem with NHST? Nice that we have $$P(D|\theta)$$, but we would like to know the probability of $$\theta$$ given the data _D_, so $$P(\theta|D)$$, right?
 
@@ -70,6 +70,8 @@ __Important__ that in this case, we got a probability distribution of the parame
 * posterior median: the median of the posterior distribution,
 * Maximum A Posteriori (MAP) estimation: maximum of the posterior distribution (asymptotically similar to the maximum-likelihood estimator).
 
+## Comparison
+
 #### Advantages of the Bayesian approach over the frequentist one
 
 * We can answers question like "What is the probability that the parameter $$\theta$$ lies within/outer a given interval/equal to a given value based on the data?"
@@ -87,7 +89,7 @@ __Important__ that in this case, we got a probability distribution of the parame
 
   or some _conjugate prior_ mimicing the likelihood structure within the prior to receive _posteriors_ within the same parameterized distribution family as the _priors_. 
 
-#### Example 
+## Example 
 
 Assume that our data $$y$$ consists of $$n$$ i.i.d. normal variables with mean $$\mu$$ and variance $$\sigma^2$$,i.e. $$y_i \sim N(\mu,\sigma^2) $$. Furthermore, let $$ \theta = (\mu,\sigma^2)$$, meaning we assume that both mean and variance are unknown and random.
 
@@ -98,7 +100,7 @@ $$ p(\mu,\sigma^2) = p(\mu|\sigma^2)p(\sigma^2), $$
 As priors, we now choose:
 
 * $$p(\mu|\sigma^2) \sim N(0,\sigma^2)$$
-* $$p(\sigma^2) = \frac{1}{(\sigma^2)^2}exp\big\{-\frac{1}{\sigma^2}\big\} \sim \mathcal{IG}(1,1)$$ (an exponential $\mathcal{E}(1)$ on precision $\sigma^{-2}$)
+* $$p(\sigma^2) = \frac{1}{(\sigma^2)^2}exp\big\{-\frac{1}{\sigma^2}\big\} \sim \mathcal{IG}(1,1)$$ (an exponential $$\mathcal{E}(1)$$ on precision $$\sigma^{-2}$$)
 
 These selection of priors gives us the following joint posterior:
 
@@ -109,16 +111,16 @@ $$ p(\mu,\sigma^2 | y) \propto \frac{1}{\sigma}\exp\bigg\{-\frac{1}{2\sigma^2/(n
 which is the product of a conditionally normal distribution
 $$ p(\mu|\sigma^2,y) \sim N\bigg(\frac{n}{n+1}\bar{y}, \frac{1}{n+1}\sigma^2\bigg),  $$
 and an inverse gamma distribution,
-$$ p(\sigma^2 | y) \sim \mathcal{IG}\bigg(\frac{n+2}{2}, \frac{1}{2}\bigg(2+s^2+\frac{n}{n+1}\bar{y}^2 \bigg)\bigg).   $$
+$$p(\sigma^2 | y) \sim \mathcal{IG}\bigg(\frac{n+2}{2}, \frac{1}{2}\bigg(2+s^2+\frac{n}{n+1}\bar{y}^2 \bigg)\bigg).$$
 
-Note that the marginal posterior distribution of $\mu$ is a non-standardized Student's $t$ distribution:
+Note that the marginal posterior distribution of $$\mu$$ is a non-standardized Student's $$t$$ distribution:
 $$ \mu|y \sim \mathcal{T}_{n+2}\bigg(\frac{n}{n+1}\bar{y}, \frac{2+s^2+\frac{n}{n+1}\bar{y}^2}{(n+1)(n+2)}\bigg)$$.
 
-
+## Conclusion
 
 ...seeing the results of this simple example, one can imagine, how cumbersome is to derive these posteriors.
 
-What is more, it is even impossible to derive such close forms of the _posteriors_ in many cases. Here comes the [__Gibbs sampler__](Gibbs_sampler/README.md) into the picture.
+What is more, it is even impossible to derive such close forms of the _posteriors_ in many cases. Here comes the [__Gibbs sampler__](Gibbs_sampler/README.md) into the picture. 
 
 
 
