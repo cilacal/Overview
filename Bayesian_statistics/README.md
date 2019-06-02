@@ -119,9 +119,7 @@ $$p(\sigma^2 | y) \sim \mathcal{IG}\bigg(\frac{n+2}{2}, \frac{1}{2}\bigg(2+s^2+\
 Note that the marginal posterior distribution of $$\mu$$ is a non-standardized Student's $$t$$ distribution:
 $$ \mu|y \sim \mathcal{T}_{n+2}\bigg(\frac{n}{n+1}\bar{y}, \frac{2+s^2+\frac{n}{n+1}\bar{y}^2}{(n+1)(n+2)}\bigg)$$.
 
-![mu_posterior](mu_posterior.png)
-
-_This plot was generated using simulated data. We can see that the given prior works pretty well, as the data  "pushed" the prior towards the real value, resulting a posterior distribution with high peek around the true value._ 
+![This plot was generated using simulated data. We can see that the given prior works pretty well, as the data "pushed" the prior towards the real value, resulting a posterior distribution with high peek around the true value.](mu_posterior.png)
 
 ### The same in plain english
 
