@@ -32,7 +32,7 @@ Hence, the $$p$$-value answers the following question:
 
 __"Given that H_0 is true, what is the probability of this (or more extreme) data?"__
 
-Given that $$H_0$$ is often a hypothesis for a parameter of a distribution (such as _mean_, _variance_, _proportion in the population_, etc. For a nice cheat sheet about, which hypothesis test is when to use with which test-statistic please refer to my [mind map about statistics](), or [here](<https://www.dummies.com/education/math/statistics/handling-statistical-hypothesis-tests/>) or [here](<https://dacg.in/2018/11/17/statistical-test-cheat-sheet/>)), let's denote it with $$\theta$$. Furthermore, denote the data what we have by _D_. Hence, we can write the probability what we have got as $$P(D|\theta)$$. 
+Given that $$H_0$$ is often a hypothesis for a parameter of a distribution (such as _mean_, _variance_, _proportion in the population_, etc. For a nice cheat sheet about, which hypothesis test is when to use with which test-statistic please refer to my [mind map about statistics](), or [here](https://www.dummies.com/education/math/statistics/handling-statistical-hypothesis-tests/) or [here](https://dacg.in/2018/11/17/statistical-test-cheat-sheet/)), let's denote it with $$\theta$$. Furthermore, denote the data what we have by _D_. Hence, we can write the probability what we have got as $$P(D|\theta)$$. 
 
 ### Example in plain english
 
@@ -99,21 +99,27 @@ As priors, we now choose:
 * $$p(\mu|\sigma^2) \sim N(0,\sigma^2)$$
 * $$p(\sigma^2) = \frac{1}{(\sigma^2)^2}exp\big\{-\frac{1}{\sigma^2}\big\} \sim \mathcal{IG}(1,1)$$ (an exponential $$\mathcal{E}(1)$$ on precision $$\sigma^{-2}$$)
 
-These selection of priors gives us the following joint posterior:
+After putting all these priors and the likelihood into the [Bayes' rule](#Bayesian approach) the following joint posterior is given:
 
 $$ p(\mu,\sigma^2 | y)  \propto p(\mu|\sigma^2,y) \times p(\sigma^2|y)    $$
+
 where $$p(\mu|\sigma^2,y)$$ is the conditional (posterior) distribution, and $$p(\sigma^2|y)$$ the marginal (posterior) distribution.
 This, gives:
+
 $$ p(\mu,\sigma^2 | y) \propto \frac{1}{\sigma}\exp\bigg\{-\frac{1}{2\sigma^2/(n+1)}\bigg(\mu - \frac{n\bar{y}}{n+1}\bigg)^2\bigg\} \times (\sigma^2)^{-\frac{n+2}{2}-1}\exp\bigg\{-\frac{1}{2\sigma^2}\bigg(2+s^2+\frac{n}{n+1}\bar{y}^2\bigg)\bigg\}  $$
+
 which is the product of a conditionally normal distribution
+
 $$ p(\mu|\sigma^2,y) \sim N\bigg(\frac{n}{n+1}\bar{y}, \frac{1}{n+1}\sigma^2\bigg),  $$
+
 and an inverse gamma distribution,
+
 $$p(\sigma^2 | y) \sim \mathcal{IG}\bigg(\frac{n+2}{2}, \frac{1}{2}\bigg(2+s^2+\frac{n}{n+1}\bar{y}^2 \bigg)\bigg).$$
 
 Note that the marginal posterior distribution of $$\mu$$ is a non-standardized Student's $$t$$ distribution:
 $$ \mu|y \sim \mathcal{T}_{n+2}\bigg(\frac{n}{n+1}\bar{y}, \frac{2+s^2+\frac{n}{n+1}\bar{y}^2}{(n+1)(n+2)}\bigg)$$.
 
-![mu_posterior](/home/lachiee/myProjects/Overview/Bayesian_statistics/mu_posterior.png)
+![mu_posterior](mu_posterior.png)
 
 _This plot was generated using simulated data. We can see that the given prior works pretty well, as the data  "pushed" the prior towards the real value, resulting a posterior distribution with high peek around the true value._ 
 
@@ -121,15 +127,17 @@ _This plot was generated using simulated data. We can see that the given prior w
 
 Let's assume that we have a vector with values each normally distributed with unknown mean and variance (the same for all value). 
 
-Our _prior_ knowledge/expectation about these parameters are given by the prior distributions, i.e. we expect the mean of the values be normally distributed with $$0$$ mean and with variance, which expected to follow an inverse-gamma distribution (which is identical with an exponential distribution on the precision [:= inverse of the variance]).  If one would have got very strong knowledge/expectation about their value, so called _shrinkage priors_ (more about them [here](#Bayesian_regression/README.md)), or in case of no prior knowledge/expectation about their distribution the above described noninformative priors could have been used. 
+Our _prior_ knowledge/expectation about these parameters are given by the prior distributions, i.e. we expect the mean of the values be normally distributed with $$0$$ mean and with variance, which expected to follow an inverse-gamma distribution (which is identical with an exponential distribution on the precision [:= inverse of the variance]).  If one would have got very strong knowledge/expectation about their value, so called _shrinkage priors_ (more about them [here](Bayesian_regression/README.md)), or in case of no prior knowledge/expectation about their distribution the above described noninformative priors could have been used. 
 
 After some (a lot) computation, we receive the _joint posterior distribution_ of the parameters mean and variance, which is a product of a normal distribution (which is conditional on the variance) and an inverse-gamma distribution. From this joint posterior, the marginal posterior of the mean can be derived by integrating the joint posterior out on the variance. This procedure give a non-standardized Student's _t_ distribution with the parameterization described above.
 
 Hence, even without knowing the real value of the mean and the variance, with the given priors we can infer about these parameters, as we have their distribution.
 
+Furthermore, recognize, that a prior _normal - inverse-gamma_ gave us a posterior _normal - inverse-gamma_, so we can talk about a _conjugate prior_.
+
 # Conclusion
 
-...seeing the results of this simple example, one can imagine, how cumbersome is to derive these posteriors. However, there is a [list](<https://en.wikipedia.org/wiki/Conjugate_prior>) on the Wikipedia with the conjugate priors of the most important distribution, included the posteriors received by using them.
+...seeing the results of this simple example, one can imagine, how cumbersome is to derive these posteriors. However, there is a [list](https://en.wikipedia.org/wiki/Conjugate_prior) on the Wikipedia with the conjugate priors of the most important distribution, included the posteriors received by using them.
 
 However, in many cases it is impossible or very difficult to derive such close forms of the _posteriors_. Here comes the [__Gibbs sampler__](Gibbs_sampler/README.md) into the picture. 
 
