@@ -1,16 +1,8 @@
 # Bayesian statistics
 
-This article is intended to summarize the  most important concepts of the mysterious field of Bayesian statistics.
+This article is intended to summarize and give some feelings about the essence of the mysterious field of Bayesian statistics.
 
 My hope is, that with the help of my explanations and the materials I link here, I will be able to spread the amazing view, how a bayesian statistician sees the world.
-
-# Table of contents
-
-- Introduction to the Bayesian statistics _- That is where you are currently._
-- [Gibbs sampler - Introductory example](Gibbs_sampler/README.md)
-- [Realistic example for a Gibbs sampler](Gibbs_sampler/real_gibbs_sampler.R)
-  - [Metropolis-Hastings within a Gibbs sampler](MH_within_Gibbs/README.md)
-- [Bayesian regression](Bayesian_regression/README.md) 
 
 # Bayes' rule
 
