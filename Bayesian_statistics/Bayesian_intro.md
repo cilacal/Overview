@@ -12,7 +12,7 @@ Yes, this is it. This is the rule on which a whole new kind of statistical think
 
 # Frequentist approach
 
-The main weapon of the [frequenstist](<#Resources>) statistics is the Null Hypothesis Significance Testing (NHST). This method of statistical inference is probably known for everybody as this is, even if it is thoroughly criticized, used in many fields, even in the academia. NHST works based on the concepts of significance testing developed by [Fisher (1934, 1955, 1959)](<#Resources>) and the critical rejection regions introduced by [Neyman & Pearson (1928)](<#Resources>).  Specifically, the probability of the observed, or more extreme result is calculated given that the null hypothesis ($$H_0$$, which often denotes the cases of _"no effect"_, _"mean = 0"_, _"the populations have equal mean"_ etc.) is true. This probability is denoted by the $$p$$-value and calculated with the help of the _t-statistic_ of the given test, which has some kind of distribution (often _t-distribution_). 
+The main weapon of the [frequenstist](#resources) statistics is the Null Hypothesis Significance Testing (NHST). This method of statistical inference is probably known for everybody as this is, even if it is thoroughly criticized, used in many fields, even in the academia. NHST works based on the concepts of significance testing developed by [Fisher (1934, 1955, 1959)](#resources) and the critical rejection regions introduced by [Neyman & Pearson (1928)](#resources).  Specifically, the probability of the observed, or more extreme result is calculated given that the null hypothesis ($$H_0$$, which often denotes the cases of _"no effect"_, _"mean = 0"_, _"the populations have equal mean"_ etc.) is true. This probability is denoted by the $$p$$-value and calculated with the help of the _t-statistic_ of the given test, which has some kind of distribution (often _t-distribution_). 
 
 Given that the $$p$$-value is smaller than the chosen level of significance_ (usually set to $$0.05$$ or $$0.01$$), we can conclude something like this:
 
@@ -96,7 +96,7 @@ As priors, we now choose:
 * $$p(\mu|\sigma^2) \sim N(0,\sigma^2)$$
 * $$p(\sigma^2) = \frac{1}{(\sigma^2)^2}exp\big\{-\frac{1}{\sigma^2}\big\} \sim \mathcal{IG}(1,1)$$ (an exponential $$\mathcal{E}(1)$$ on precision $$\sigma^{-2}$$)
 
-After putting all these priors and the likelihood into the [Bayes' rule](#Bayesian approach) the following joint posterior is given:
+After putting all these priors and the likelihood into the [Bayes' rule](#bayesian approach) the following joint posterior is given:
 
 $$ p(\mu,\sigma^2 | y)  \propto p(\mu|\sigma^2,y) \times p(\sigma^2|y)    $$
 
