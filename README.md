@@ -26,7 +26,7 @@ However, if the field of modeling, especially, time series modeling lies closer 
 
 On the other hand, if simulation of random variables if the field of your interests, please click on the following link:
 
-{% page-ref page="Modeling/README.md" %}
+{% page-ref page="Simulation/README.md" %}
 
 If you just would like to see a collection of algorithms, computational tasks, which covers the most important topics from programming needed for the previous sections, visit the following link:
 
