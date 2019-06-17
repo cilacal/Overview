@@ -16,13 +16,13 @@ for(i in 1:n){
 }
 ```
 
-![broken_gibbs](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/densities2.png)
+![broken_gibbs](./densities2.png)
 
 Well, from this plot we don't know much. 
 
-![converge_report_x](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/converge_report_x2.png)
+![converge_report_x](./converge_report_x2.png)
 
-![converge_report_y](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/converge_report_y2.png)
+![converge_report_y](.r/converge_report_y2.png)
 
 From the analysis of the convergence it is clear, that something went wrong. The series are not stationary at all, meaning that the drawings "didn't find their distribution". Looking at the ACF graphs, it is no wonder. There is enormous autocorrelation, leading to a series of drawings which converge very, very, very sloooowly to their "right" distribution. But why? Why was the constant _B_ so important in the convergence?
 

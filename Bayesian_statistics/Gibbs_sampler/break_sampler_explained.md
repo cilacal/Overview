@@ -4,13 +4,13 @@ To understand better, why it has happened, let us consider an extended version o
 
 Let's consider a $$2 \text{ x } 2$$ matrix, representing the _joint distribution_ of two Bernoulli random variables $$X$$ and $$Y$$:
 
-![The joint distribution](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/casella1.png)
+![The joint distribution](./casella1.png)
 
 If we apply Gibbs sampler with the given joint distribution, i.e. drawing first $$X$$ based with probabilities given by the state of the previous $$Y$$, then drawing $$Y$$ based on the state of this drawn $$Y$$, the distribution of $$X$$'s and $$Y$$'s should converge to their _joint probabilities_, represented by the previous table. 
 
 To do so, we first need the _conditional probabilities_ of moving to $$Y$$ from $$X$$, which is the following:
 
-![The conditional probabilities](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/casella2.png)
+![The conditional probabilities](./casella2.png)
 
 This is straightforward to calculate given that the marginal of $$X$$ and $$Y$$ are respectively given by
 
@@ -77,7 +77,7 @@ The code above gives us a uniform matrix with equal probabilities to move from e
 
 ![The origin_df](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/uniform_table.png)
 
-![broken_gibbs](/home/lachiee/myProjects/Overview/Bayesian_statistics/Gibbs_sampler/broken_gibbs.png)
+![broken_gibbs](./broken_gibbs.png)
 
 ## Resources
 
