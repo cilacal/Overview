@@ -30,7 +30,7 @@ On the other hand, if simulation of random variables if the field of your intere
 
 If you just would like to see a collection of algorithms, computational tasks, which covers the most important topics from programming needed for the previous sections, visit the following link:
 
-{% page-ref page="Algorithms/coin_changer/README.md" %}
+{% page-ref page="Algorithms/README.md" %}
 
 # My months by Trality
 

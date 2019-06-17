@@ -143,3 +143,5 @@ However, in many cases it is impossible or very difficult to derive such close f
 * Fisher RA: Statistical Methods and Scientific Induction. *Journal of the Royal Statistical Society, Series B.* 1955;17(1):69–78.
 * Fisher RA: Statistical methods and scientific inference. (2nd ed.). NewYork: Hafner Publishing,1959
 * Neyman J, Pearson ES: On the Use and Interpretation of Certain Test Criteria for Purposes of Statistical Inference: Part I. *Biometrika.*1928;20A(1/2):175–240. 10.3389/fpsyg.2015.00245
+* For this section I used heavily our notes and home assignments of the course _Advanced Topics in Financial Econometrics_ hold by [Gregor Kastner](https://www.wu.ac.at/statmath/faculty-staff/faculty/gkastner) during the summer semester of 2019 in the Quantitative Finance Master Program of the Business University of Vienna.
+
