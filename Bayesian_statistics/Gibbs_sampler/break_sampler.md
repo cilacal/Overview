@@ -22,7 +22,7 @@ Well, from this plot we don't know much.
 
 ![converge_report_x](./converge_report_x2.png)
 
-![converge_report_y](.r/converge_report_y2.png)
+![converge_report_y](./converge_report_y2.png)
 
 From the analysis of the convergence it is clear, that something went wrong. The series are not stationary at all, meaning that the drawings "didn't find their distribution". Looking at the ACF graphs, it is no wonder. There is enormous autocorrelation, leading to a series of drawings which converge very, very, very sloooowly to their "right" distribution. But why? Why was the constant _B_ so important in the convergence?
 
