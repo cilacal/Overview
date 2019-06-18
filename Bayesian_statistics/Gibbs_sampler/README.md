@@ -102,7 +102,7 @@ As said earlier, these plots helps to identify the needed length of the _burn-in
 ## Does the Gibbs sampler works always?
 
 Well, if I asked the question like that, the answer is probably a 'No'. But how can one break the Gibbs sampler?
-This question is examined in the two examples provided [here](./break_sampler.md) and [here](./break_sampler_explained.md).
+This question is examined in the two examples provided [here](./break_sampler_explained.md).
 
 ## Resources
 
