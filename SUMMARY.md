@@ -7,13 +7,17 @@
   - [Realistic example for a Gibbs sampler](Bayesian_statistics/Gibbs_sampler/real_gibbs_sampler.R)
   - [Metropolis-Hastings within a Gibbs sampler](Bayesian_statistics/MH_within_Gibbs/README.md)
   - [Bayesian regression](Bayesian_statistics/Bayesian_regression/README.md) 
-  
-- [Modeling](Modeling/README.md) 
+  - _Coming soon!_
+- [Modeling](Modeling/README.md)
+  - [ARIMA](./Modeling/ARIMA/README.md)
+  - [GARCH](./Modeling/GARCH/README.md)
+  - [VAR](./Modeling/VAR/README.md)
   - _Coming soon!_
 - [Simulation](Simulation/README.md) 
-  - _Coming soon!_
-- [Asset management](Asset_management/README.md)
+  - _Coming soon!_ 
 - [Cool algorithms](Algorithms/README.md)
   - [Coin changer](Algorithms/coin_changer/README.md)
   - _Coming soon!_
+- [Things passing into none of the previous folders](./others/README.md)
+  - [Copula](./others/Copulas/README.md)
 
