@@ -127,13 +127,15 @@ Below, we can see the number of iterations needed for convergence (where the con
 
 It is straightforward, that altering to the _joint distribution_ with very low probabilities breaks the Gibbs sampler very fast. We needed to make only 4 steps in the direction of this new _joint distribution_ from the _uniform joint distribution_ to get sample from the Gibbs sampler, which do not converge at all to the desired _joint distribution_. 
 
-(To reproduce this example and generate this graph, please refer to this [script](break_sampler_explained.R).)
+To reproduce this example and generate this graph, please refer to this [script](break_sampler_explained.R).
 
 ## Explanation
 
 If you read until here, you probably would like to know why did that happen both in this example and in the [previous one](./break_sampler.md) as well.
 
 The explanation is the same: the Gibbs sampler stuck in a never ending circular drawing. It is more obvious in the case of the second example, where we have the following _conditional distributions_ in case of the table with the low probabilities:
+
+MISSING
 
 
 

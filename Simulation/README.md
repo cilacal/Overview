@@ -4,5 +4,7 @@ The sections is focused on different techniques to simulate random variables. Th
 
 # Table of contents
 
-- _Coming soon!_
+- [Generating random variables - Inverse transform, composition method, acceptance-rejection method](./generating_random_variables/README.md)
+- [Monte-Carlo simulation](./monte-carlo_simulation/README.md)
+- [Simulating SDEs](./simulationg_sdes/README.md)
 

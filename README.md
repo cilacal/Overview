@@ -6,7 +6,7 @@ This gitbook contains an overview about the most interesting topics from my stud
 - to provide a quick summary about my knowledge for my future applications,
 - and, most importantly, to provide an overseeable summary for myself (i.e. a cheatsheet for me :) ).
 
-I hope, I can reach my goals with the help of the repository.
+This page is not a collection of Wikipedia pages, but rather an explanation of the materials in "plain english". Of course, sometimes, where it is needed, I use the strict mathematical formulations, but for such content this isn't your blog. Here I help you to understand (and myself to remember to) the materials, not to prove something or write down the models using exact formulations.
 
 # About myself
 
@@ -32,9 +32,9 @@ If you just would like to see a collection of algorithms, computational tasks, w
 
 {% page-ref page="Algorithms/README.md" %}
 
-# My months by Trality
+# My time by Trality
 
-I have learned a lot about development, advanced algorithms, technical writing and overall about the "start up life" thanks to the unique opportunity of being part of the team of [Trality](trality.com) from the very beginning of the development of the platform.
+I have learned a lot about software development, advanced algorithms, trading bots, automated trading, technical analysis of assets, technical writing and overall about the "start up life" thanks to the unique opportunity of being part of the team of [Trality](trality.com) from the very beginning of the development of the platform.
 A, by far not total, summary of my contribution to the platform can be read in the [documentation of Trality](https://docs.trality.com) under the sections
 
 - [Built-in strategies](https://docs.trality.com/api-documentation/built-in-strategies)
@@ -43,7 +43,7 @@ A, by far not total, summary of my contribution to the platform can be read in t
 
 Of course, the implementation of these advanced algorithms cannot be published on my private profile.
 
-Please note, that besides the implementation of the algorithms, described in the above mentioned part of the documentation, the documentation itself was written by me.
+Please note, that besides the implementation (mainly in Python) of the algorithms, described in the above mentioned part of the documentation, the documentation itself was written by me.
 
 #### Disclaimer
 
