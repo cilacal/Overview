@@ -47,7 +47,7 @@ This is an extension of $$ARCH(p)$$ model, i.e. of the model, where the variance
 
 ### Estimation of the $$GARCH(r,s)$$ model
 
-
+To estimate the parameters of a $$GARCH(r,s)$$ model [maximum likelihood (ML)](../) estimator is used. To be able to apply ML, the problem should be rewritten in the following way. 
 
 ## Resources
 

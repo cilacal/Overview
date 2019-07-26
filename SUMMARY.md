@@ -1,5 +1,12 @@
 * [Summary](README.md)
 * [A little bit of necessary theory](./Theory/README.md)
+  * [Ways to estimate model parameters](./Theory/Parameter_estimation/README.md)
+    * [Method of Moments (MoM)](./Theory/Method_of_moments/README.md)
+    * [Maximum Likelihood (ML)](./Theory/Maximum_likelihood/README.md)
+    * [Bayesian approach](./Theory/Bayesian_approach/README.md)
+  * [Stochastic calculus](./Theory/Stochastic_calculus)
+    * [Ito calculus](./Theory/Stochastic_calculus/Ito_calculus.md)
+    * [Black-Scholes formula](./Theory/Stochastic_calculus/Black_Scholes_formula.md)
 
 - [Bayesian statistics](./Bayesian_statistics/README.md)
   - [Introduction to the Bayesian statistics](./Bayesian_statistics/Bayesian_intro.md)
