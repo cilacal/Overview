@@ -1,4 +1,4 @@
-# Cox-Ingersoll-Ross (CIR)
+# Cox-Ingersoll-Ross (CIR) model
 
 _Please refer to this [Wikipedia article]([https://en.wikipedia.org/wiki/Cox%E2%80%93Ingersoll%E2%80%93Ross_model](https://en.wikipedia.org/wiki/Cox–Ingersoll–Ross_model)) for more details. Here, you can find a summary of that page._
 

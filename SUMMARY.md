@@ -12,6 +12,9 @@
   - [ARIMA](./Modeling/ARIMA/README.md)
   - [GARCH](./Modeling/GARCH/README.md)
   - [VAR](./Modeling/VAR/README.md)
+  - [Interest-rate modeling](./Modeling/IR_modeling/README.md)
+    - [Vasicek model](./Modeling/IR_modeling/Vasicek_model/README.md)
+    - [CIR model](./Modeling/IR_modeling/CIR_model/README.md)
   - _Coming soon!_
 - [Simulation](Simulation/README.md) 
   - _Coming soon!_ 
