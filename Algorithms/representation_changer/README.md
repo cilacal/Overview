@@ -99,7 +99,7 @@ The following logic is implemented:
 * after adding the new value, the absolute value of the number is updated and set to the result derived by the [integer division](<https://www.statmethods.net/management/operators.html>) of the number with the base.
 * These steps are done until the updated absolute number is larger than 0.
 
-As it was allowed to set the number of bits $k$, the required number of $0$'s are put in front of the sequence if the given input was positive and $1$'s in case of negative input.
+Since it was allowed to set the number of bits $$k$$, the required number of $$0$$'s are put in front of the sequence if the given input was positive and $$1$$'s in case of negative input.
 
 ## Doing the calculation in the other way around 
 

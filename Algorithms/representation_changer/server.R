@@ -1,5 +1,5 @@
-source("repr_changer_invers.R")
-source("repr_changer.R")
+source("./repr_changer_invers.R")
+source("./repr_changer.R")
 
 server <- function(input, output){
   output$result_repr <- renderText({
