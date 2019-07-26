@@ -1,11 +1,12 @@
 * [Summary](README.md)
+* [A little bit of necessary theory](./Theory/README.md)
 
-- [Bayesian statistics](Bayesian_statistics/README.md)
-  - [Introduction to the Bayesian statistics](Bayesian_statistics/Bayesian_intro.md)
-  - [Gibbs sampler](Bayesian_statistics/Gibbs_sampler/README.md)
-    - [How to break the Gibbs sampler?](Bayesian_statistics/Gibbs_sampler/break_sampler_explained.md)
-  - [Realistic example for a Gibbs sampler](Bayesian_statistics/Gibbs_sampler/real_gibbs_sampler.R)
-  - [Metropolis-Hastings within a Gibbs sampler](Bayesian_statistics/MH_within_Gibbs/README.md)
+- [Bayesian statistics](./Bayesian_statistics/README.md)
+  - [Introduction to the Bayesian statistics](./Bayesian_statistics/Bayesian_intro.md)
+  - [Gibbs sampler](./Bayesian_statistics/Gibbs_sampler/README.md)
+    - [How to break the Gibbs sampler?](./Bayesian_statistics/Gibbs_sampler/break_sampler_explained.md)
+  - [Realistic example for a Gibbs sampler](./Bayesian_statistics/Gibbs_sampler/real_gibbs_sampler.R)
+  - [Metropolis-Hastings within a Gibbs sampler](./Bayesian_statistics/MH_within_Gibbs/README.md)
   - [Bayesian regression](Bayesian_statistics/Bayesian_regression/README.md) 
   - _Coming soon!_
 - [Modeling](Modeling/README.md)
@@ -16,11 +17,13 @@
     - [Vasicek model](./Modeling/IR_modeling/Vasicek_model/README.md)
     - [CIR model](./Modeling/IR_modeling/CIR_model/README.md)
   - _Coming soon!_
-- [Simulation](Simulation/README.md) 
-  - _Coming soon!_ 
-- [Cool algorithms](Algorithms/README.md)
-  - [Coin changer](Algorithms/coin_changer/README.md)
-  - [Number representation changer](Algorithms/representation_changer/README.md)
+- [Simulation](./Simulation/README.md) 
+  - [Generating random variables - Inverse transform, composition method, acceptance-rejection method](./Simulation/generating_random_variables/README.md)
+  - [Monte-Carlo simulation](./Simulation/Monte-carlo_simulation/README.md)
+  - [Simulating SDEs](./Simulation/Simulating_sdes/README.md)
+- [Cool algorithms](./Algorithms/README.md)
+  - [Coin changer](./Algorithms/coin_changer/README.md)
+  - [Number representation changer](./Algorithms/representation_changer/README.md)
   - _Coming soon!_
 - [Things passing into none of the previous folders](./others/README.md)
   - [Copula](./others/Copulas/README.md)
