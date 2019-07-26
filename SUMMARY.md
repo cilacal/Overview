@@ -20,6 +20,7 @@
   - _Coming soon!_ 
 - [Cool algorithms](Algorithms/README.md)
   - [Coin changer](Algorithms/coin_changer/README.md)
+  - [Number representation changer](Algorithms/representation_changer/README.md)
   - _Coming soon!_
 - [Things passing into none of the previous folders](./others/README.md)
   - [Copula](./others/Copulas/README.md)
