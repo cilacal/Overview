@@ -36,7 +36,7 @@ So the algorithm to generate $$\theta = \int_a^bg(x)dx$$ is
 
 That's it. However, it is easier to imagine by looking at this picture (in this example $$g(x)$$ is referred to as $$f(x)$$): 
 
-![MCIntegration](./MCIntegration.png)7
+![MCIntegration](./MCIntegration.png)
 
 # Monte Carlo error
 
