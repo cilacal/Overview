@@ -2,6 +2,10 @@
 
 This description serves only to get an overview about the building structures of an R Shiny application through the example of the ["representation changer"](README.md) of a given number.  Besides that, the usage of other R scripts in a given script is also represented.
 
+## Shiny App overview
+
+To have a shiny application one needs to program the two sides: the server side and the user interface (UI) side. 
+
 ## UI side
 
 ```R
