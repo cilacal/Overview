@@ -52,8 +52,6 @@ That's it. However, it is easier to imagine by looking at this picture (in this 
 
 ## Importance Sampling
 
-
-
 # Disclaimer
 
 This description is based heavily on the study materials provided by [Zehra Eksi-Altay](https://www.wu.ac.at/en/statmath/faculty-staff/faculty/zeksi) for the Financial Engineering class in the summer semester in 2019 within the Quantitative Finance Master Program of the WU University Vienna. The quotes without noting their sources are directly from these materials.

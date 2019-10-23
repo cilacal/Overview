@@ -36,8 +36,8 @@ And now we arrived to the [Monte Carlo simulation](./monte-carlo_simulation/READ
 
 # Table of contents
 
-- [Generating random variables - Inverse transform, composition method, acceptance-rejection method](./generating_random_variables/README.md)
 - [Monte Carlo simulation](./monte-carlo_simulation/README.md)
+- [Generating random variables - Inverse transform, composition method, acceptance-rejection method](./generating_random_variables/README.md)
 - [Simulating SDEs](./simulationg_sdes/README.md)
 
 

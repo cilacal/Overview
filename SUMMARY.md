@@ -25,8 +25,8 @@
     - [CIR model](./Modeling/IR_modeling/CIR_model/README.md)
   - _Coming soon!_
 - [Simulation](./Simulation/README.md) 
+  - [Monte-Carlo simulation](./Simulation/monte-carlo_simulation/README.md)
   - [Generating random variables - Inverse transform, composition method, acceptance-rejection method](./Simulation/generating_random_variables/README.md)
-  - [Monte-Carlo simulation](./Simulation/Monte-carlo_simulation/README.md)
   - [Simulating SDEs](./Simulation/Simulating_sdes/README.md)
 - [Cool algorithms](./Algorithms/README.md)
   - [Coin changer](./Algorithms/coin_changer/README.md)
