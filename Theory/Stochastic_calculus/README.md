@@ -27,10 +27,8 @@ Well, now it is better. Now we can talk about some important definitions, proper
 
 * __Submartingale/Supermartingale/Martingale__: if $$\forall t, s$$ with $$t > s$$ we have $$E(X_t|F_s) \geq X_s \ E(X_t|F_s) \leq X_s \ E(X_t|F_s) = X_s$$. In other words, the process is _increasing/decreasing/equal_ __on average__. 
   
-
 * __Markov process__: $$E(f(X_{t+s})|F_t) = E(f(X_{t+s})|\sigma(X_t))$$, i.e. the conditional distribution of future values $$X_{t+s}$$ for $$s \geq 0$$ is completely determined by the present value $$X_t$$. In other words: the process has "no memory", previous elements except the current doesn't influence the coming ones.
   
-
 * __Point process__: processes which assumes that certain relevant "events" (e.g. defaults) occur at random time points $$\tau_0 < \tau_1 < \dots$$. The corresponding point process is given by $$N_t := sup\{n, \Tau_n \leq t\}$$, i.e. $$N_t$$ is the number of events occured up to time $$t$$.
   * Most famous such process is the __Poisson process__ with the following definition:
     * $$\tau_i \sim exp(\lambda), i.e. \tau_i \sim \lambda e^{-\lambda x}$$ with the c.d.f. $$F(x;\lambda) = P(\tau_n < x) = 1 - e^{-\lambda x}$$ for $$x \geq 0$$ otherwise $$0$$, so $$P(\tau_n \geq x) = e^{-\lambda x}$$.
@@ -51,8 +49,15 @@ Well, now it is better. Now we can talk about some important definitions, proper
   * $$W$$ has continuous sample paths.
 
     ![brownianmotion](/home/lachiee/myProjects/Overview/Theory/Stochastic_calculus/brownianmotion.jpg "The picture is from https://images.app.goo.gl/rtT2jJUwoVMxaSGZ9")
+  
+  ...and with the following further properties which can be derived from the aboves:
+  
+  * $$Cov(W_t, W_s) = E[W_tW_s] - E[W_t]E[W_s] = E[W_tW_s]=E[(W_t-W_s)W_s] + E[W_s^2] = E[W_t - W_s]E[W_s] + s = s$$ for $$s < t$$.
+  * $$W_t = W_t - W_o \sim N(0,t)$$
+  * $$(W_t)_{t \geq 0}; (W_t^2-t)_{t \geq 0}; exp(\sigma W_t - \frac{1}{2}\sigma^2t)$$ are martingales w.r.t. 
+  * Extra: Donskers invariance principle says, that $$W_t^n = \frac{1}{\sqrt{n}}\sum_{i = 1}^{[nt]}X_i$$ for $$X_i$$ with $$E[X_i] = 0, Var(X_i) = 1$$. Then $$W_t^n$$  converges to a Brownian motion in distribution.
 
-
+Only two more definitions and its done.
 
 #### Disclaimer
 
