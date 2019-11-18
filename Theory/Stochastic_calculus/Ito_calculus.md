@@ -1,6 +1,10 @@
 # Ito calculus
 
+## The Ito - formula
 
+Consider a cont. function $$X:[0,T] \rightarrow R$$ with continuous quadratic variation $$[X]_t$$ and a twice continuously differentiable function $$F:R \rightarrow R$$. Then we have for $$t \leq T$$
+
+$$$$
 
 #### Disclaimer
 

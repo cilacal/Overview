@@ -52,12 +52,32 @@ Well, now it is better. Now we can talk about some important definitions, proper
   
   ...and with the following further properties which can be derived from the aboves:
   
-  * $$Cov(W_t, W_s) = E[W_tW_s] - E[W_t]E[W_s] = E[W_tW_s]=E[(W_t-W_s)W_s] + E[W_s^2] = E[W_t - W_s]E[W_s] + s = s$$ for $$s < t$$.
-  * $$W_t = W_t - W_o \sim N(0,t)$$
+  * The covariance between two points is the time of the point being first, i.e.: $$Cov(W_t, W_s) = E[W_tW_s] - E[W_t]E[W_s] = E[W_tW_s]=E[(W_t-W_s)W_s] + E[W_s^2] = E[W_t - W_s]E[W_s] + s = s$$ for $$s < t$$.
+  * Any point of the Brownian motion is normally distributed with 0 mean and the time of the given point, i.e. $$W_t = W_t - W_o \sim N(0,t)$$
   * $$(W_t)_{t \geq 0}; (W_t^2-t)_{t \geq 0}; exp(\sigma W_t - \frac{1}{2}\sigma^2t)$$ are martingales w.r.t. 
   * Extra: Donskers invariance principle says, that $$W_t^n = \frac{1}{\sqrt{n}}\sum_{i = 1}^{[nt]}X_i$$ for $$X_i$$ with $$E[X_i] = 0, Var(X_i) = 1$$. Then $$W_t^n$$  converges to a Brownian motion in distribution.
 
-Only two more definitions and its done.
+
+Only two more definitions and its done, trust me.
+
+* <u> _First variation of $$X$$ on $$[0,T]$$_</u> : it is the limit of the sum of differences between points of Brownian motion, i.e.: $$Var(X):=sup\{\sum_{t_i\in \tau}|X(t_i) - X(t_{i-1})|,\tau \text{a partition of [0, T]}\}$$
+  
+  * If $$Var(X) < \infty $$, $$X$$ is said to be of finite variation. $$\rightarrow$$ If $$X:[0,T] \rightarrow R$$ is **continuously differentiable**, then $$X$$ is of finite variation.
+  * It measures the __total up and down movements__ of the function by summing their absolute values.
+  
+  __This is not the same as variance!__ Only the individual random variables which make up the process have variance, not the stochastic process itself. The variance can be computed at each time and we can see how it behaves as a function of time, it is going to be a real valued function. We know, that the variance of a Brownian motion at time $$t$$ is equal to $$t$$.
+  The variation on the other hand is calculated in the whole __time period__. 
+* <u> _Quadratic variation of $$X$$_</u>: $$[X]_t = V^2(X;\tau_n) = \sum_{t_i \in \tau_n; t_i <t}(X(t_i) - X(t_{i-1}))^2$$
+  
+  * $$[B]_t = V_t^2(B.(\omega);\tau_n)$$ converges to $$t$$ in prob. (!!!)
+  * Quadratic variation __captures the relative drift__ of the stochastic process over an interval of time. It can be seen as an __internal clock__ of the stochastic process describing how randomness accumulates over time.
+
+__Sample paths of Brownian motion are of infinite first variation and nowhere differentiable!__
+
+Connection between them is, that if $$X:[0, T] -> R$$ is cont. and of finite variation its quadratic variation $$[X]_t$$ is $$0$$. Intuitively, we can say that a stoch. process which can be continuously differentiated goes nowhere.
+
+
+Finally, we came to the end of the definitions. These were necessary to be able to understand the intuition behind the Ito formula, which is discussed in the [next section](./Ito_calculus.md).
 
 #### Disclaimer
 
